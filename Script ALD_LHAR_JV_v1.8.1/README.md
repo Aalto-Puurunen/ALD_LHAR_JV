@@ -17,11 +17,11 @@ Acknowledgements: GENESIS project (Grant Agreement no. 101194246), Chips JU and 
 ## Requirements
 - Python 3.12 and newer
 - Packages:
--- numpy
--- scipy
--- pandas
--- matplotlib
--- openpyxl
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - openpyxl
 
 Create an environment and install:
 ```
