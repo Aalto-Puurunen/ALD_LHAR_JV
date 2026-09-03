@@ -73,6 +73,7 @@ Units must be exactly as noted.
 Nx and Nt must be integers; set by formatting cells as “Number” with no text.
 
 A minimal example uses:  
+
 Running code, e.g., `Example_LHAR_001`,    
 H = 5.00E-07 m, 
 W = 0.01 m,   
@@ -93,83 +94,83 @@ Nt = 200,
 additional θ = 0.43,  
 
 ## Running the demo
-Ensure `Parameters_ALD_LHAR.xlsx` exists and is closed.
-Run:
+1. Ensure `Parameters_ALD_LHAR.xlsx` exists and is closed.
+2. Run:
 ```
 python ALD_LHAR_JV.py
 ```
 The script will:
 
--- Solve the coupled system using `solve_ivp(..., method='BDF')`
--- Display several Matplotlib plots during execution
--- Write results to `<RunningCode>_results.xlsx` in sheet `LHAR results`
--- Print total runtime
+- Solve the coupled system using `solve_ivp(..., method='BDF')`
+- Display several Matplotlib plots during execution
+- Write results to `<RunningCode>_results.xlsx` in sheet `LHAR results`
+- Print total runtime
 
 Example output filename for the provided parameters: `Example_LHAR_001_results.xlsx`.
 
 Typical runtime:
 
--- ~2.7 s wall-clock
--- Tested on a machine with 32 GB RAM, 1.30 GHz CPU (CPU-only)
+- ~2.7 s wall-clock
+- Tested on a machine with 32 GB RAM, 1.30 GHz CPU (CPU-only)
 You can measure timing with:
 ```
 /usr/bin/time -p python ALD_LHAR_JV.py
 ```
 ## What the script computes
--- Geometry, transport, and regime indicators:
-  -- L, h, vA, DKn, DA, Deff, Knudsen number, Thiele modulus
--- PDE solution:
-  -- Partial pressure pA(x,t) and surface coverage θ(x,t) over x∈[0,L] and t∈[0, t_pulse]
--- Final-time profiles:
-  --pA(x, t_final), θ(x, t_final), growth q·θ(x)
--- Penetration depth and slope:
-  -- x and x/H at θ targets [0.9 … 0.1] plus the additional θ in B19
-  -- PD at 50% coverage (x/H at θ=0.5), slope at θ=0.5, and back-extracted c (free molecular flow)
+- Geometry, transport, and regime indicators:
+  - L, h, vA, DKn, DA, Deff, Knudsen number, Thiele modulus
+- PDE solution:
+  - Partial pressure pA(x,t) and surface coverage θ(x,t) over x∈[0,L] and t∈[0, t_pulse]
+- Final-time profiles:
+  - pA(x, t_final), θ(x, t_final), growth q·θ(x)
+- Penetration depth and slope:
+  - x and x/H at θ targets [0.9 … 0.1] plus the additional θ in B19
+  - PD at 50% coverage (x/H at θ=0.5), slope at θ=0.5, and back-extracted c (free molecular flow)
 
 ## Output workbook structure
+
 File: `<RunningCode>_results.xlsx`, sheet: `LHAR results`
 
 The script writes four blocks:
 
 1. Parameters (starting at A1):  
 
-  -- Two columns: “Parameter”, “Value” with the exact inputs read from the Excel sheet
-  -- Includes script name and version, and the running code used as label
+  - Two columns: “Parameter”, “Value” with the exact inputs read from the Excel sheet
+  - Includes script name and version, and the running code used as label
 
 2. Calculated Values (starting at A23):
 
-  -- “Calculated Values”, “Value”
-  -- Includes L, h, vA, DKn, DA, Deff, Knudsen, Thiele, Δθ around 0.5, PD50 (m), PD50 (x/H), slope at 0.5, back-extracted c, exposure, and integrals:
-    -- Θ integral, ∫θ(x)dx (μm)
-    -- Growth integral, ∫Growth(x)dx (atoms·μm/nm²)
+  - “Calculated Values”, “Value”
+  - Includes L, h, vA, DKn, DA, Deff, Knudsen, Thiele, Δθ around 0.5, PD50 (m), PD50 (x/H), slope at 0.5, back-extracted c, exposure, and integrals:
+    - Θ integral, ∫θ(x)dx (μm)
+    - Growth integral, ∫Growth(x)dx (atoms·μm/nm²)
 
 3. Final profiles data table (starting at E1):
-
--- Columns:
-    -- `x (m)`
-    -- `x/H (-)`
-    -- `pA (Pa)`
-    -- `theta (-)`
-    -- `Growth (atoms/nm2)` [values = q·θ converted to atoms/nm²]
+  - Columns:
+    - `x (m)`
+    - `x/H (-)`
+    - `pA (Pa)`
+    - `theta (-)`
+    - `Growth (atoms/nm2)` [values = q·θ converted to atoms/nm²]
 
 4. Penetration-depth table (starting at J1):
 
--- Columns:
--- `Theta (-)`
--- `x (m)`
--- `x/H (-)`
--- `Slope (-)` [|dθ/d(x/H)| near the crossing]
--- `Diff. in theta points (%)` [local θ difference between adjacent grid points]
+  - Columns:
+    - `Theta (-)`
+    - `x (m)`
+    - `x/H (-)`
+    - `Slope (-)` [|dθ/d(x/H)| near the crossing]
+    - `Diff. in theta points (%)` [local θ difference between adjacent grid points]
 
 Number formats:
 
-The script sets number formats ‘0.0000’ for columns H and I in the worksheet (Excel-only formatting).
+- The script sets number formats ‘0.0000’ for columns H and I in the worksheet (Excel-only formatting).
 
 Plots shown during the run:
--- Contour of pA(x,t)
--- Contour of θ(x,t)
--- Line plots at t_final for pA vs x, θ vs x, growth vs x
--- Corresponding plots versus x/H
+- Contour of pA(x,t)
+- Contour of θ(x,t)
+- Line plots at t_final for pA vs x, θ vs x, growth vs x
+- Corresponding plots versus x/H
 
 These plots are displayed but not saved to disk.
 
