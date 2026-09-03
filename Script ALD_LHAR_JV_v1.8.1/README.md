@@ -47,24 +47,24 @@ You can run this script in any environment that executes Python code—terminal/
 # Input workbook format
 Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the script. It must contain a sheet named `LHAR_Parameters`. The script reads specific cells in column B:
 
-B1 `Running code` (string; used as output filename prefix)  
-B3 `Cavity height, H (m)` float  
-B4 `Cavity width, W (m)` float  
-B5 `Aspect ratio, AR (-)` float; L/H  
-B6 `Sticking probability, c (-)` float  
-B7 `Desorption probability, Pd (1/s)` float  
-B8 `Adsorption capacity, q (m-2)` float  
-B9 `Pulse time, t_pulse (s)` float  
-B10 `Temperature, T (K)` float  
-B11 `Partial pressure of reactant at z=0, pA0 (Pa)` float  
-B12 `Partial pressure of inert gas, pI (Pa)` float  
-B13 `Molar mass of reactant, MA (kg/mol)` float  
-B14 `Molecular diameter of reactant, dA (m)` float  
-B15 `Molar mass of inert gas, MI (kg/mol)` float  
-B16 `Molecular diameter of inert gas, dI (m)` float  
-B17 `Number of spatial grid points, Nx` integer (>2)  
-B18 `Number of time grid points, Nt` integer (>1)  
-B19 `Additional θ value for reporting penetration depth and slope (-)` float in (0,1); if outside, script resets to 0.45  
+- B1 `Running code` (string; used as output filename prefix)  
+- B3 `Cavity height, H (m)` float  
+- B4 `Cavity width, W (m)` float  
+- B5 `Aspect ratio, AR (-)` float; L/H  
+- B6 `Sticking probability, c (-)` float  
+- B7 `Desorption probability, Pd (1/s)` float  
+- B8 `Adsorption capacity, q (m-2)` float  
+- B9 `Pulse time, t_pulse (s)` float  
+- B10 `Temperature, T (K)` float  
+- B11 `Partial pressure of reactant at z=0, pA0 (Pa)` float  
+- B12 `Partial pressure of inert gas, pI (Pa)` float  
+- B13 `Molar mass of reactant, MA (kg/mol)` float  
+- B14 `Molecular diameter of reactant, dA (m)` float  
+- B15 `Molar mass of inert gas, MI (kg/mol)` float  
+- B16 `Molecular diameter of inert gas, dI (m)` float  
+- B17 `Number of spatial grid points, Nx` integer (>2)  
+- B18 `Number of time grid points, Nt` integer (>1)  
+- B19 `Additional θ value for reporting penetration depth and slope (-)` float in (0,1); if outside, script resets to 0.45  
 
 Important:
 
@@ -74,24 +74,24 @@ Nx and Nt must be integers; set by formatting cells as “Number” with no text
 
 A minimal example uses:  
 
-Running code, e.g., `Example_LHAR_001`,    
-H = 5.00E-07 m, 
-W = 0.01 m,   
-AR = 1000,  
-c = 1.0e-3,  
-Pd = 0,  
-q = 4.00E+18 m-2,  
-t_pulse = 0.5 s,  
-T = 573 K,  
-pA0 = 50 Pa,   
-pI = 450 Pa,  
-MA = 0.072 kg/mol,  
-dA = 6.00E-10 m,  
-MI = 0.028 kg/mol,   
-dI = 3.60E-10 m,  
-Nx = 500,  
-Nt = 200,  
-Additional θ = 0.43,  
+- Running code, e.g., `Example_LHAR_001`,    
+- H = 5.00E-07 m, 
+- W = 0.01 m,   
+- AR = 1000,  
+- c = 1.0e-3,  
+- Pd = 0,  
+- q = 4.00E+18 m-2,  
+- t_pulse = 0.5 s,  
+- T = 573 K,  
+- pA0 = 50 Pa,   
+- pI = 450 Pa,  
+- MA = 0.072 kg/mol,  
+- dA = 6.00E-10 m,  
+- MI = 0.028 kg/mol,   
+- dI = 3.60E-10 m,  
+- Nx = 500,  
+- Nt = 200,  
+- Additional θ = 0.43,  
 
 ## Running the demo
 1. Ensure `Parameters_ALD_LHAR.xlsx` exists and is closed.
