@@ -73,26 +73,24 @@ Units must be exactly as noted.
 Nx and Nt must be integers; set by formatting cells as “Number” with no text.
 
 A minimal example uses:
-
+Running code, e.g., `Example_LHAR_001`,    
 H = 5.00E-07 m, 
-W = 0.01 m, 
-AR = 1000, 
-c = 1.0e-3, 
-Pd = 0, 
-q = 4.00E+18 m-2,
-t_pulse = 0.5 s, 
-T = 573 K, 
-pA0 = 50 Pa, 
-pI = 450 Pa,
-MA = 0.072 kg/mol, 
-dA = 6.00E-10 m, 
-MI = 0.028 kg/mol, 
-dI = 3.60E-10 m,
-Nx = 500, 
-Nt = 200, 
-additional θ = 0.43,
-
-Running code, e.g., `Example_LHAR_001`.
+W = 0.01 m,   
+AR = 1000,  
+c = 1.0e-3,  
+Pd = 0,  
+q = 4.00E+18 m-2,  
+t_pulse = 0.5 s,  
+T = 573 K,  
+pA0 = 50 Pa,   
+pI = 450 Pa,  
+MA = 0.072 kg/mol,  
+dA = 6.00E-10 m,  
+MI = 0.028 kg/mol,   
+dI = 3.60E-10 m,  
+Nx = 500,  
+Nt = 200,  
+additional θ = 0.43,  
 
 ## Running the demo
 Ensure Parameters_ALD_LHAR.xlsx exists and is closed.
