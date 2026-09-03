@@ -1,6 +1,6 @@
 # ALD_LHAR_JV — Example demo
 Version: 1.8.1
-This repository contains a single Python script that solves the 1D diffusion–reaction equations for ALD in a rectangular lateral high-aspect-ratio (LHAR) cavity using SciPy’s solve_ivp with the BDF method. Parameters are provided in an Excel workbook; results are written to a new Excel workbook in the same folder, and several diagnostic plots are displayed.
+This repository contains a single Python script that solves the 1D diffusion–reaction equations for ALD in a rectangular lateral high-aspect-ratio (LHAR) cavity using SciPy’s `solve_ivp` with the BDF method. Parameters are provided in an Excel workbook; results are written to a new Excel workbook in the same folder, and several diagnostic plots are displayed.
 
 Acknowledgements: GENESIS project (Grant Agreement no. 101194246), Chips JU and its members, including top-up funding by Business Finland.
 
@@ -10,9 +10,9 @@ Acknowledgements: GENESIS project (Grant Agreement no. 101194246), Chips JU and 
 - Exact description of required inputs and the produced outputs
 
 ## Files
-- ALD_LHAR_JV.py — main script (version 1.8.1; dated April 21, 2026)
-- Parameters_ALD_LHAR.xlsx — input parameters workbook (sheet: LHAR_Parameters)
-- Output: <RunningCode>_results.xlsx (written to the same directory)
+- `ALD_LHAR_JV.py` — main script (version 1.8.1; dated April 21, 2026)
+- `Parameters_ALD_LHAR.xlsx` — input parameters workbook (sheet: `LHAR_Parameters`)
+- Output: `<RunningCode>_results.xlsx` (written to the same directory)
 
 ## Requirements
 - Python 3.12 and newer
@@ -24,27 +24,26 @@ Acknowledgements: GENESIS project (Grant Agreement no. 101194246), Chips JU and 
 -- openpyxl
 
 Create an environment and install:
-```
-py -3.12 -m venv .venv
-.\.venv\Scripts\Activate.ps1
+```python3.12 -m venv .venv
+source .venv/bin/activate   # Windows: .\.venv\Scripts\Activate.ps1
 pip install -U pip
-pip install numpy scipy pandas matplotlib openpyxl
-```
-Optionally, write a requirements.txt with:
+pip install numpy scipy pandas matplotlib openpyxl```
 
+Optionally, write a `requirements.txt` with:
+```
 numpy
 scipy
 pandas
 matplotlib
 openpyxl
-
-Install with pip install -r requirements.txt.
+```
+Install with `pip install -r requirements.txt`.
 
 ### NOTE
 You can run this script in any environment that executes Python code—terminal/command line, IDEs (e.g., Spyder, VS Code, PyCharm), or Jupyter notebooks—provided Python 3.12 and the required packages (numpy, scipy, pandas, matplotlib, openpyxl) are installed in that environment. Ensure the working directory contains ALD_LHAR_JV.py and Parameters_ALD_LHAR.xlsx (sheet name: LHAR_Parameters), and close the Excel file before running. If running in a headless environment (no display), set the Matplotlib backend via MPLBACKEND=Agg to suppress GUI windows.
 
 # Input workbook format
-Place an Excel file named Parameters_ALD_LHAR.xlsx in the same folder as the script. It must contain a sheet named LHAR_Parameters. The script reads specific cells in column B:
+Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the script. It must contain a sheet named `LHAR_Parameters`. The script reads specific cells in column B:
 
 B1 Running code (string; used as output filename prefix)
 B3 Cavity height, H (m) float
