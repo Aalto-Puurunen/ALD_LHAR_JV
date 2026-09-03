@@ -143,7 +143,7 @@ The script writes four blocks:
 
   - “Calculated Values”, “Value”
   - Includes L, h, vA, DKn, DA, Deff, Knudsen, Thiele, Δθ around 0.5, PD50 (m), PD50 (x/H), slope at 0.5, back-extracted c, exposure, and integrals:
-    - Θ integral, ∫θ(x)dx (μm)
+    - θ integral, ∫θ(x)dx (μm)
     - Growth integral, ∫Growth(x)dx (atoms·μm/nm²)
 
 3. Final profiles data table (starting at E1):
