@@ -204,7 +204,7 @@ python -c "import numpy,scipy,pandas,matplotlib; print('numpy',numpy.__version__
   - Inappropiate settings or inconsistent units can cause failures. Verify units and values. Consider increasing or decreasing Nx or adjusting pulse time as a quick diagnostic.
 
 ## Citing 
-Please cite as:
+Please cite as:  
 J.A. Velasco and R. L. Puurunen, ALD_LHAR_JV – Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity, (2026), Github repository, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV) 
 
 ## Copyright and license
