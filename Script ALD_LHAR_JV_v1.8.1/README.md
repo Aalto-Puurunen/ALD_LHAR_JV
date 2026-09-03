@@ -24,12 +24,12 @@ Acknowledgements: GENESIS project (Grant Agreement no. 101194246), Chips JU and 
 -- openpyxl
 
 Create an environment and install:
-
+```
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -U pip
 pip install numpy scipy pandas matplotlib openpyxl
-
+```
 Optionally, write a requirements.txt with:
 
 numpy
