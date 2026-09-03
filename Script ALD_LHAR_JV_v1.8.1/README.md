@@ -112,6 +112,7 @@ Typical runtime:
 
 - ~2.7 s wall-clock
 - Tested on a machine with 32 GB RAM, 1.30 GHz CPU (CPU-only)
+
 You can measure timing with:
 ```
 /usr/bin/time -p python ALD_LHAR_JV.py
