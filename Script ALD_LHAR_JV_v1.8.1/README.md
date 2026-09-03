@@ -1,5 +1,6 @@
 # ALD_LHAR_JV - Example demo
 Version: 1.8.1
+
 This repository contains a single Python script that solves the 1D diffusion–reaction equations for ALD in a rectangular lateral high-aspect-ratio (LHAR) cavity using SciPy’s `solve_ivp` with the BDF method. Parameters are provided in an Excel workbook; results are written to a new Excel workbook in the same folder, and several diagnostic plots are displayed.
 
 Acknowledgements: GENESIS project (Grant Agreement no. 101194246), Chips JU and its members, including top-up funding by Business Finland.
