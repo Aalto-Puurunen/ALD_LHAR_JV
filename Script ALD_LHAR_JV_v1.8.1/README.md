@@ -63,8 +63,8 @@ Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the s
 - B14 `Molecular diameter of reactant, dA (m)` float  
 - B15 `Molar mass of inert gas, MI (kg/mol)` float  
 - B16 `Molecular diameter of inert gas, dI (m)` float  
-- B17 `Number of spatial grid points, Nx` integer (>2)  
-- B18 `Number of time grid points, Nt` integer (>1)  
+- B17 `Number of spatial grid points, Nx` integer   
+- B18 `Number of time grid points, Nt` integer   
 - B19 `Additional θ value for reporting penetration depth and slope (-)` float in (0,1); if outside, script resets to 0.45  
 
 Important:
@@ -177,36 +177,39 @@ Plots shown during the run:
 These plots are displayed but not saved to disk.
 
 ## Reproducibility notes
-Solver: scipy.integrate.solve_ivp with method='BDF'
-Deterministic given fixed inputs and grid (no randomness)
-Grid:
-Space: uniform grid with Nx points from 0 to L
-Time: linear spacing of Nt points from 0 to t_pulse, passed as t_eval
-Boundary conditions:
-Pinned pA(0,t) = pA0 via initial condition and dPAdt[0] = 0
-Neumann at outlet implemented by one-sided second derivative at x=L
-Report exact library versions if needed:
+- Solver: `scipy.integrate.solve_ivp` with `method='BDF'`
+- Deterministic given fixed inputs and grid (no randomness)
+- Grid:
+  - Space: uniform grid with Nx points from 0 to L
+  - Time: linear spacing of Nt points from 0 to t_pulse, passed as t_eval
+- Boundary conditions:
+  - Pinned pA(0,t) = pA0 via initial condition and dPAdt[0] = 0
+  - Neumann at outlet implemented by one-sided second derivative at x=L
 
-
+Report exact library versions if needed:  
+```
 python -V
 python -c "import numpy,scipy,pandas,matplotlib; print('numpy',numpy.__version__); print('scipy',scipy.__version__); print('pandas',pandas.__version__); print('matplotlib',matplotlib.__version__)"
-Troubleshooting
-File locked or permission error:
-Close Parameters_ALD_LHAR.xlsx in Excel before running.
-KeyError: 'LHAR_Parameters':
-Ensure the sheet is named exactly LHAR_Parameters.
-Type errors (e.g., cannot convert string to float):
-Ensure B3–B19 contain numeric values (no units or text).
-Grid too small:
-Ensure Nx ≥ 3 and Nt ≥ 2. Larger grids increase runtime and memory.
-Solver convergence issues:
-Extremely stiff settings or inconsistent units can cause failures. Verify units and consider reducing Nx or adjusting pulse time as a quick diagnostic.
-Output filename confusion:
-The saved file is <RunningCode>_results.xlsx even though the console message mentions _simulation_results.xlsx.
-How to cite
-Please cite the software and the paper:
+```
+## Troubleshooting
+- File locked or permission error:
+  - Close Parameters_ALD_LHAR.xlsx in Excel before running.
+- KeyError: 'LHAR_Parameters':
+  - Ensure the sheet is named exactly `LHAR_Parameters.xlsx`.
+- Type errors (e.g., cannot convert string to float):
+  - Ensure B3–B19 contain numeric values (no units or text).
+- Grid too small:
+  - Ensure large enough grids, for example Nx ≥ 100 and Nt ≥ 100. Large grids increase accuracy; however, it can increase runtime and memory.
+- Solver convergence issues:
+  - Inappropiate settings or inconsistent units can cause failures. Verify units and values. Consider increasing or decreasing Nx or adjusting pulse time as a quick diagnostic.
 
-Software: add your preferred software citation or DOI (e.g., Zenodo) here.
-Model reference: Ylilammi et al., J. Appl. Phys. 123, 205301 (2018). https://doi.org/10.1063/1.5028178
-License
-Please add your software license here (e.g., MIT/Apache-2.0/GPL-3.0).
+## Citing 
+Please cite as:
+J.A. Velasco and R. L. Puurunen, ALD_LHAR_JV – Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity, (2026), Github repository, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV) 
+
+## Copyright and license
+MIT License
+Copyright 2026 (c) Jorge A. Velasco and Riikka L. Puurunen, Aalto University
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
