@@ -11,7 +11,7 @@ The authors acknowledge funding from the GENESIS project under Grant Agreement n
 The parameters for the simulation are entered in the accompanying file “Parameters_ALD_LHAR.xlsx”. The simulation is performed by running “ALD_LHAR_JV_v1.8.1.py”. There’s no need to modify the Python script nor the name of the parameters file. Once the simulation ends, the script creates a results file (the given running code/name in the parameters file is shown in the result’s file name: “given running code”_results.xlsx). The results file includes parameters, calculated values, final profiles for pressure and surface coverage along distance and distance divided by channel height. Calculated values include: diffusion coefficients, Knudsen number, Thiele modulus, penetration depth and slope at half coverage, and the back-extracted sticking coefficient for Kn >> 1 (as in Arts et al. J. Vac. Sci. Technol., A 37, 030908, 2019, DOI: [10.1116/1.5093620](https://doi.org/10.1116/1.5093620)), profile integrated area, and the penetration depth and slope at different surface coverage values.     
 
 ## Citing 
-Please cite as:
+Please cite as:  
 J.A. Velasco and R. L. Puurunen, ALD_LHAR_JV – Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity, (2026), Github repository, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV) 
 
 ## Copyright and license
