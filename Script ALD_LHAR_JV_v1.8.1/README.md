@@ -68,9 +68,9 @@ Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the s
 
 Important:
 
-Close the Excel file before running (Windows/Excel locks the file).
-Units must be exactly as noted.
-Nx and Nt must be integers; set by formatting cells as “Number” with no text.
+- Close the Excel file before running (Windows/Excel locks the file).
+- Units must be exactly as noted.
+- Nx and Nt must be integers; set by formatting cells as “Number” with no text.
 
 A minimal example uses:  
 
