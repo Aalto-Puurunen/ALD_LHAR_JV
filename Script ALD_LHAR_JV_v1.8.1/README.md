@@ -91,7 +91,7 @@ MI = 0.028 kg/mol,
 dI = 3.60E-10 m,  
 Nx = 500,  
 Nt = 200,  
-additional θ = 0.43,  
+Additional θ = 0.43,  
 
 ## Running the demo
 1. Ensure `Parameters_ALD_LHAR.xlsx` exists and is closed.
