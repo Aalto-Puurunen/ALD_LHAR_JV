@@ -1,7 +1,6 @@
 # ALD_LHAR_JV
+## Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio (LHAR) cavity
 Version: 1.8.1.1
-
-Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio (LHAR) cavity.
 
 ## Project description
 This Python script provides the solution of the one-dimensional diffusion equation with surface reaction for partial pressure and surface coverage as function of time (Eqs. 10 and 16 of Ylilammi et al., J. Appl. Phys. 123, 205301, 2018, DOI: [10.1063/1.5028178](https://doi.org/10.1063/1.5028178)). Ylilammi's approximation to the diffusion equation is not used in this script. Instead, the partial differential equations for diffusion and reaction are solved numerically. For the surface reaction, the model uses Langmuir adsorption and includes a desorption term. For the calculations, the effective diffusion coefficient is assumed to be constant along the cavity. This script can be used in a wide range of diffusion regimes (Kn number from Kn<<1 to Kn>>1). The script was written by Dr. Jorge A. Velasco, by request of Prof. Riikka L. Puurunen (Catalysis Group, Aalto University).  
