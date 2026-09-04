@@ -52,7 +52,7 @@ Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the s
 - B5 `Aspect ratio, AR (-)` float; L/H  
 - B6 `Sticking coefficient, c (-)` float  
 - B7 `Desorption probability, Pd (1/s)` float  
-- B8 `Adsorption capacity, q0 (#/m2)` float  
+- B8 `Adsorption capacity, q0 (#/m²)` float  
 - B9 `Pulse time, t_pulse (s)` float  
 - B10 `Temperature, T (K)` float  
 - B11 `Partial pressure of reactant at x=0, pA0 (Pa)` float  
@@ -79,7 +79,7 @@ A minimal example uses:
 - AR = 1000,  
 - c = 1.0e-3,  
 - Pd = 0,  
-- q0 = 4.00E+18 #/m2,  
+- q0 = 4.00E+18 #/m²,  
 - t_pulse = 0.5 s,  
 - T = 573 K,  
 - pA0 = 50 Pa,   
@@ -122,7 +122,7 @@ You can measure timing with:
 - PDE solution:
   - Partial pressure pA(x,t) and surface coverage θ(x,t) over x∈[0,L] and t∈[0,tpulse]
 - Final-time profiles:
-  - pA(x, t_final), θ(x, t_final), growth q0·θ(x)
+  - pA(x, t_final), θ(x, t_final), growth q0×θ(x)
 - Penetration depth and slope:
   - Penetration depths x and x/H at (θ=0.5), slope at θ=0.5, and back-extracted c (for free molecular flow)
   - Penetration depths x and x/H, and slopes at θ targets [0.9 … 0.1] plus the additional θ in B19
@@ -151,7 +151,7 @@ The script writes four blocks:
     - `x/H (-)`
     - `pA (Pa)`
     - `theta (-)`
-    - `Growth (atoms/nm2)` [values = q0 × θ]
+    - `Growth (atoms/nm²)` [values = q0 × θ]
 
 4. Penetration-depth table (starting at J1):
 
