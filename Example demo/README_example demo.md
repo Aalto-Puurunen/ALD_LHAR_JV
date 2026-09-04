@@ -42,7 +42,7 @@ openpyxl
 Install with `pip install -r requirements.txt`.
 
 ### NOTE
-You can run this script in any environment that executes Python code—terminal/command line, IDEs (e.g., Spyder, VS Code, PyCharm), or Jupyter notebooks—provided Python 3.12 and the required packages (numpy, scipy, pandas, matplotlib, openpyxl) are installed in that environment. Ensure the working directory contains ALD_LHAR_JV_v1.8.1.1.py and Parameters_ALD_LHAR.xlsx (sheet name: LHAR_Parameters), and close the Excel file before running. If running in a headless environment (no display), set the Matplotlib backend via MPLBACKEND=Agg to suppress GUI windows.
+You can run this script in any environment that executes Python code—terminal/command line, IDEs (e.g., Spyder, VS Code, PyCharm), or Jupyter notebooks—provided Python 3.12 and the required packages (numpy, scipy, pandas, matplotlib, openpyxl) are installed in that environment. Ensure the working directory contains `ALD_LHAR_JV_v1.8.1.1.py` and `Parameters_ALD_LHAR.xlsx` (sheet name: `LHAR_Parameters`), and close the Excel file before running. If running in a headless environment (no display), set the Matplotlib backend via MPLBACKEND=Agg to suppress GUI windows.
 
 # Input workbook format
 Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the script. It must contain a sheet named `LHAR_Parameters`. The script reads specific cells in column B:
