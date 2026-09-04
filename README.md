@@ -9,7 +9,7 @@ The parameters for the simulation are entered in the accompanying file “Parame
 
 ## Citing 
 Please cite as:  
-J.A. Velasco and R. L. Puurunen, ** ALD_LHAR_JV – Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity **, (2026), Github repository, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV). [https://doi.org/10.5281/zenodo.22304150](https://doi.org/10.5281/zenodo.22304150) 
+J.A. Velasco and R. L. Puurunen, **ALD_LHAR_JV – Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity**, (2026), *Github repository*, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV). [https://doi.org/10.5281/zenodo.22304150](https://doi.org/10.5281/zenodo.22304150) 
 
 ## Acknowledgements 
 The authors acknowledge funding from the GENESIS project under Grant Agreement no. 101194246. The project is supported by the Chips JU and its members (including top-up funding by Business Finland). Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or Chips JU. Neither the European Union nor the granting authority can be held responsible for them. 
