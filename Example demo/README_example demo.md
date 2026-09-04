@@ -1,4 +1,5 @@
-# ALD_LHAR_JV - Example demo
+#  Example demo
+## ALD_LHAR_JV — Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity
 Version: 1.8.1.1
 
 This repository contains a single Python script that solves the 1D diffusion–reaction equations for ALD in a rectangular lateral high-aspect-ratio (LHAR) cavity using SciPy’s `solve_ivp` with the BDF method. Parameters are provided in an Excel workbook; results are written to a new Excel workbook in the same folder, and several diagnostic plots are displayed.
@@ -203,7 +204,7 @@ python -c "import numpy,scipy,pandas,matplotlib; print('numpy',numpy.__version__
 
 ## Citing 
 Please cite as:  
-J.A. Velasco and R. L. Puurunen, ALD_LHAR_JV – Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity, (2026), Github repository, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV) 
+J.A. Velasco and R. L. Puurunen, ALD_LHAR_JV — Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity, (2026), Github repository, [https://github.com/Aalto-Puurunen/ALD_LHAR_JV](https://github.com/Aalto-Puurunen/ALD_LHAR_JV) 
 
 ## Acknowledgements
 The authors acknowledge funding from the GENESIS project under Grant Agreement no. 101194246. The project is supported by the Chips JU and its members (including top-up funding by Business Finland). Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or Chips JU. Neither the European Union nor the granting authority can be held responsible for them.
