@@ -47,50 +47,50 @@ You can run this script in any environment that executes Python code—terminal/
 Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the script. It must contain a sheet named `LHAR_Parameters`. The script reads specific cells in column B:
 
 - B1 `Running code` (string; used as output filename prefix)  
-- B3 `Cavity height, _H_ (m)` float  
-- B4 `Cavity width, _W_ (m)` float  
+- B3 `Cavity height, H (m)` float  
+- B4 `Cavity width, W (m)` float  
 - B5 `Aspect ratio, AR (-)` float; L/H  
-- B6 `Sticking coefficient, _c_ (-)` float  
-- B7 `Desorption probability, _P_d (1/s)` float  
-- B8 `Adsorption capacity, _q_0 (#/m2)` float  
-- B9 `Pulse time, _t__pulse (s)` float  
-- B10 `Temperature, _T_ (K)` float  
+- B6 `Sticking coefficient, c (-)` float  
+- B7 `Desorption probability, Pd (1/s)` float  
+- B8 `Adsorption capacity, q0 (#/m2)` float  
+- B9 `Pulse time, t_pulse (s)` float  
+- B10 `Temperature, T (K)` float  
 - B11 `Partial pressure of reactant at x=0, pA0 (Pa)` float  
 - B12 `Partial pressure of inert gas, pI (Pa)` float  
-- B13 `Molar mass of reactant, _M_A (kg/mol)` float  
-- B14 `Molecular diameter of reactant, _d_A (m)` float  
-- B15 `Molar mass of inert gas, _M_I (kg/mol)` float  
-- B16 `Molecular diameter of inert gas, _d_I (m)` float  
-- B17 `Number of spatial grid points, _N_x` integer   
-- B18 `Number of time grid points, _N_t` integer   
-- B19 `Additional _θ_ value for reporting penetration depth and slope (-)` float in (0,1); if outside, script resets to 0.45  
+- B13 `Molar mass of reactant, MA (kg/mol)` float  
+- B14 `Molecular diameter of reactant, dA (m)` float  
+- B15 `Molar mass of inert gas, MI (kg/mol)` float  
+- B16 `Molecular diameter of inert gas, dI (m)` float  
+- B17 `Number of spatial grid points, Nx` integer   
+- B18 `Number of time grid points, Nt` integer   
+- B19 `Additional θ value for reporting penetration depth and slope (-)` float in (0,1); if outside, script resets to 0.45  
 
 Important:
 
 - Close the Excel file before running (Windows/Excel locks the file).
 - Units must be exactly as noted.
-- _N_x and _N_t must be integers; set by formatting cells as “Number” with no text.
+- Nx and Nt must be integers; set by formatting cells as “Number” with no text.
 
 A minimal example uses:  
 
 - Running code, e.g., `Example_LHAR_001`,    
-- _H_ = 5.00E-07 m, 
-- _W_ = 0.01 m,   
+- H = 5.00E-07 m, 
+- W = 0.01 m,   
 - AR = 1000,  
-- _c_ = 1.0e-3,  
-- _P_d = 0,  
-- _q_0 = 4.00E+18 #/m2,  
-- _t__pulse = 0.5 s,  
-- _T_ = 573 K,  
-- _p_A0 = 50 Pa,   
-- _p_I = 450 Pa,  
-- _M_A = 0.072 kg/mol,  
-- _d_A = 6.00E-10 m,  
-- _M_I = 0.028 kg/mol,   
-- _d_I = 3.60E-10 m,  
-- _N_x = 500,  
-- _N_t = 200,  
-- Additional _θ_ = 0.43,  
+- c = 1.0e-3,  
+- Pd = 0,  
+- q0 = 4.00E+18 #/m2,  
+- t_pulse = 0.5 s,  
+- T = 573 K,  
+- pA0 = 50 Pa,   
+- pI = 450 Pa,  
+- MA = 0.072 kg/mol,  
+- dA = 6.00E-10 m,  
+- MI = 0.028 kg/mol,   
+- dI = 3.60E-10 m,  
+- Nx = 500,  
+- Nt = 200,  
+- Additional θ = 0.43,  
 
 ## Running the demo
 1. Ensure `Parameters_ALD_LHAR.xlsx` exists and is closed.
@@ -118,14 +118,14 @@ You can measure timing with:
 ```
 ## What the script computes
 - Geometry, transport, and regime indicators:
-  - Cavity length _L_, hydraulic diameter _h_, Average speed of molecules A _v_A, Knudsen diffusion coefficient of A _D_Kn, Gas-phase diffusion coefficient of reactant A _D_A, Effective diffusion coefficient Deff, Knudsen number, Thiele modulus
+  - Cavity length L, hydraulic diameter h, Average speed of molecules A vA, Knudsen diffusion coefficient of A DKn, Gas-phase diffusion coefficient of reactant A DA, Effective diffusion coefficient Deff, Knudsen number, Thiele modulus
 - PDE solution:
-  - Partial pressure _p_A(_x_,_t_) and surface coverage _θ_(x,t) over x∈[0,L] and t∈[0, t_pulse]
+  - Partial pressure pA(x,t) and surface coverage θ(x,t) over x∈[0,L] and t∈[0,tpulse]
 - Final-time profiles:
-  - pA(_x_, _t__final), θ(_x_, _t__final), growth _q_0·_θ_(x)
+  - pA(x, t_final), θ(x, t_final), growth q0·θ(x)
 - Penetration depth and slope:
-  - _x_ and _x_/_H_ at _θ_ targets [0.9 … 0.1] plus the additional _θ_ in B19
-  - PD at 50% coverage (_x_/_H_ at _θ_=0.5), slope at _θ_=0.5, and back-extracted _c_ (for free molecular flow)
+  - x and x/H at θ targets [0.9 … 0.1] plus the additional θ in B19
+  - PD at 50% coverage (x/H at θ=0.5), slope at θ=0.5, and back-extracted c (for free molecular flow)
 
 ## Output workbook structure
 
