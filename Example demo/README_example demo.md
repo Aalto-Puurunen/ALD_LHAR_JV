@@ -9,7 +9,7 @@ This repository contains a single Python script that solves the 1D diffusion–r
 - Exact description of required inputs and the produced outputs
 
 ## Files
-- `ALD_LHAR_JV.py` — main script (version 1.8.1; dated April 21, 2026)
+- `ALD_LHAR_JV.py` — main script (version 1.8.1.1; dated September 4th, 2026)
 - `Parameters_ALD_LHAR.xlsx` — input parameters workbook (sheet: `LHAR_Parameters`)
 - Output: `<RunningCode>_results.xlsx` (written to the same directory)
 
