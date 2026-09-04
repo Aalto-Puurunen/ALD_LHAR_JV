@@ -151,7 +151,7 @@ The script writes four blocks:
     - `x/H (-)`
     - `pA (Pa)`
     - `theta (-)`
-    - `Growth (atoms/nm2)` [values = q0·θ]
+    - `Growth (atoms/nm2)` [values = q0 × θ]
 
 4. Penetration-depth table (starting at J1):
 
