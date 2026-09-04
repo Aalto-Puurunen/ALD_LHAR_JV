@@ -1,21 +1,39 @@
 {
-    "creators": [
-        {
-            "orcid": "0000-0002-3793-1197",
-            "affiliation": "Aalto University",
-            "name": "Velasco, Jorge A."
-        },
-        {
-            "orcid": "0000-0001-8722-4864",
-            "affiliation": "Aalto University",
-            "name": "Puurunen, Riikka L."
-        }
-    ],
-
-    "license": "MIT",
-
-    "title": "ALD_LHAR_JV — Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity",
-
-    "keywords": ["atomic layer deposition", "diffusion–reaction model", "conformality", "partial conformality", "saturation profile"]
-    
+  "title": "ALD_LHAR_JV — Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio cavity",
+  "upload_type": "software",
+  "description": "A diffusion–reaction model for atomic layer deposition (ALD) in rectangular lateral high-aspect-ratio (LHAR) cavities, including tools to simulate conformality, partial conformality, and saturation profiles.",
+  "creators": [
+    {
+      "name": "Velasco, Jorge A.",
+      "affiliation": "Aalto University",
+      "orcid": "0000-0002-3793-1197"
+    },
+    {
+      "name": "Puurunen, Riikka L.",
+      "affiliation": "Aalto University",
+      "orcid": "0000-0001-8722-4864"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "atomic layer deposition",
+    "diffusion–reaction model",
+    "conformality",
+    "partial conformality",
+    "saturation profile"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "cites",
+      "scheme": "doi",
+      "identifier": "10.1063/1.5028178"
+    },
+    {
+      "relation": "cites",
+      "scheme": "doi",
+      "identifier": "10.1116/1.5093620"
+    }
+  ]
 }
