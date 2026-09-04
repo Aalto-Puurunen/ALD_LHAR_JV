@@ -1,6 +1,6 @@
 """
 ALD_LHAR_JV
-Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio (LHAR) cavity. 
+Diffusion-reaction model for ALD on a rectangular lateral high-aspect-ratio (LHAR) cavity 
 Version: 1.8.1.1
 September 4th, 2026
 
