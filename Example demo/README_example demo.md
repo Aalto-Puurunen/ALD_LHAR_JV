@@ -52,9 +52,9 @@ Place an Excel file named `Parameters_ALD_LHAR.xlsx` in the same folder as the s
 - B3 `Cavity height, H (m)` float  
 - B4 `Cavity width, W (m)` float  
 - B5 `Aspect ratio, AR (-)` float; L/H  
-- B6 `Sticking probability, c (-)` float  
+- B6 `Sticking coefficient, c (-)` float  
 - B7 `Desorption probability, Pd (1/s)` float  
-- B8 `Adsorption capacity, q (m-2)` float  
+- B8 `Adsorption capacity, q0 (#/m2)` float  
 - B9 `Pulse time, t_pulse (s)` float  
 - B10 `Temperature, T (K)` float  
 - B11 `Partial pressure of reactant at z=0, pA0 (Pa)` float  
@@ -81,7 +81,7 @@ A minimal example uses:
 - AR = 1000,  
 - c = 1.0e-3,  
 - Pd = 0,  
-- q = 4.00E+18 m-2,  
+- q0 = 4.00E+18 #/m2,  
 - t_pulse = 0.5 s,  
 - T = 573 K,  
 - pA0 = 50 Pa,   
@@ -92,7 +92,7 @@ A minimal example uses:
 - dI = 3.60E-10 m,  
 - Nx = 500,  
 - Nt = 200,  
-- Additional θ = 0.43,  
+- Additional _θ_ = 0.43,  
 
 ## Running the demo
 1. Ensure `Parameters_ALD_LHAR.xlsx` exists and is closed.
