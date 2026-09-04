@@ -141,7 +141,7 @@ The script writes four blocks:
 2. Calculated Values (starting at A23):
 
   - “Calculated Values”, “Value”
-  - Includes L, h, vA, DKn, DA, Deff, Knudsen, Thiele, Δ_θ_ around 0.5, Penetration depth at 50% coverage (m), Penetration depth (x/H) at 50% coverage PD50 (x/H), slope at _θ_=0.5, back-extracted sticking coeffient c, exposure, and integrals:
+  - Includes L, h, vA, DKn, DA, Deff, Knudsen, Thiele, Δ_θ_ around 0.5, Penetration depth at θ=0.5 (m), Penetration depth (x/H) at θ=0.5 (-), slope at θ=0.5, back-extracted sticking coeffient c, exposure, and integrals:
     - θ integral, ∫θ(x)dx (μm)
     - Growth integral, ∫Growth(x)dx (atoms·μm/nm²)
 
