@@ -124,8 +124,8 @@ You can measure timing with:
 - Final-time profiles:
   - pA(x, t_final), θ(x, t_final), growth q0·θ(x)
 - Penetration depth and slope:
-  - x and x/H at θ targets [0.9 … 0.1] plus the additional θ in B19
-  - PD at 50% coverage (x/H at θ=0.5), slope at θ=0.5, and back-extracted c (for free molecular flow)
+  - Penetration depths x and x/H at (θ=0.5), slope at θ=0.5, and back-extracted c (for free molecular flow)
+  - Penetration depths x and x/H, and slopes at θ targets [0.9 … 0.1] plus the additional θ in B19
 
 ## Output workbook structure
 
